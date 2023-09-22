@@ -223,7 +223,7 @@ export default function NavBar({handleLeftDrawerToggle, drawerOpen}) {
               sx={{'& .MuiPopover-paper': {boxShadow: '0 3px 21px 0 rgba(0,0,0,.2)'}}}
             >
             <List>
-              <ListItem key='Profile' onClick={() => navigate('profile')}>
+              <ListItem key='Profile' onClick={() => navigate('profile/me')}>
                 <ListItemButton disableRipple>
                   <ListItemIcon>
                     <PersonOutlineSharpIcon></PersonOutlineSharpIcon>

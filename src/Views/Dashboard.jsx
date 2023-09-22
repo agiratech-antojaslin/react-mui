@@ -16,7 +16,7 @@ import {
   CardActions,
   IconButton,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import StoryCard from "../components/StoryCard";
 import ChatCard from "../components/ChatCard";
@@ -26,8 +26,22 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ChatBubbleOutlineRoundedIcon from "@mui/icons-material/ChatBubbleOutlineRounded";
 import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
 import TurnedInNotRoundedIcon from "@mui/icons-material/TurnedInNotRounded";
+import { useDispatch, useSelector } from 'react-redux';
+import { addTodo, getTodos } from '../features/todo/todoSlice';
 
 export default function Dashboard() {
+  //const todos = useSelector((state) => state.todos);
+  const dispatch = useDispatch();
+  // useEffect(() => {
+  //   console.log("Todos: ", todos);
+  //   dispatch(getTodos());
+  // })
+
+  const handleAddClick = () => {
+    console.log("HAndle clic");
+    dispatch(addTodo("My todo"));
+  }
+  
   return (
     <Box>
       <Grid container>
@@ -35,7 +49,7 @@ export default function Dashboard() {
           <Card>
             <CardContent>
               <Stack direction="row" spacing={2} sx={{ overflowX: "auto" }}>
-                <StoryCard type="add"></StoryCard>
+                <StoryCard type="add" handleAddClick={handleAddClick}></StoryCard>
                 <StoryCard
                   type="view"
                   media="https://i.pinimg.com/236x/b4/bd/5d/b4bd5d3a0c0b1509fb3d1148dfd73f2f.jpg"

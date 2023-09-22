@@ -28,7 +28,7 @@ const theme = createTheme({
       main: "#973030"
     }
   },
-  shadows: "none"
+  shadows: Array(25).fill('none')
 });
 
 function App() {

@@ -5,10 +5,11 @@ import React from "react";
 import { styled, useTheme } from '@mui/material/styles';
 import { useDispatch, useSelector } from "react-redux";
 import Main from './Main';
-import { SET_MENU } from "../../store/actions";
+import { SET_MENU } from "../../store-old/actions";
 import Typography from '@mui/material/Typography';
 import { Outlet } from 'react-router-dom';
 import { CssBaseline } from "@mui/material";
+import { setMenu } from "../../features/customization/customizationSlice";
 
 export default function MainLayout() {
   const theme = useTheme();
@@ -38,7 +39,7 @@ export default function MainLayout() {
 
   const handleLeftDrawerToggle = () => {
     console.log("Comes to change drawer state", leftDrawerOpened);
-    dispatch({ type: SET_MENU, opened: !leftDrawerOpened });
+    dispatch(setMenu(!leftDrawerOpened));
   };
   return (
     <Box>

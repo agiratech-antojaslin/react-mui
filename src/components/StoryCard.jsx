@@ -3,7 +3,7 @@ import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import { Box, Stack, Card, CardContent, CardMedia, Grid } from "@mui/material";
 import "./StoryCard.css";
 
-export default function StoryCard({ type, media }) {
+export default function StoryCard({ type, media, handleAddClick }) {
   return (
     <Card
       sx={{
@@ -22,6 +22,7 @@ export default function StoryCard({ type, media }) {
             alignItems: "center",
             justifyContent: "center",
           }}
+          onClick={handleAddClick}
         >
           <AddOutlinedIcon fontSize="large" color="primary" />
         </CardContent>

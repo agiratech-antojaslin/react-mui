@@ -98,7 +98,7 @@ export default function ProfileCard() {
               }
             ></CardHeader>
             <Divider></Divider>
-            <Box disablePadding>
+            <Box>
               <List>
                 <ListItem>
                   <ListItemAvatar>

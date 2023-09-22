@@ -1,0 +1,36 @@
+DB Schema
+
+Tables
+
+1. Users
+2. Posts
+3. Stories
+4. Comments
+5. Friends
+6. Friend Requests
+7. Followers
+8. Following
+9. Likes
+10. Shares
+
+Users
+
+1.id
+2.username
+3.name
+4.emailID
+5.phone
+6.about
+7.profile_image
+8.cover_image
+9.
+
+Posts
+
+1.id
+2.user id
+3.post_image
+4.created_at
+5.like_id
+6.share_id
+7.comment_id
